@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="form-title">Registration Form</h1>
+
+        <label for="language">Preferred Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+        </select>
+
+        <label for="name" id="label-name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label for="age" id="label-age">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+
+        <label for="income" id="label-income">Monthly Income (in ₹):</label>
+        <input type="number" id="income" placeholder="Enter your monthly income" required>
+
+        <label for="financial-goal" id="label-goal">Financial Goal:</label>
+        <select id="financial-goal" required>
+            <option value="savings">Savings</option>
+            <option value="investment">Investment</option>
+            <option value="education">Education</option>
+            <option value="retirement">Retirement</option>
+            <option value="home">Buy a Home</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="literacy" id="label-literacy">Financial Literacy Level:</label>
+        <select id="literacy" required>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+
+        <label for="aadhar" id="label-aadhar">Upload Aadhaar Card:</label>
+        <input type="file" id="aadhar" required>
+
+        <button type="submit" id="submit-btn">Submit</button>
+    </div>
+    <footer>
+        <p id="footer-text">© 2025 Registration Form. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language').value;
+            translateForm(lang);
+        }
+    </script>
+</body>
+</html>
